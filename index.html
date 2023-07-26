@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parent Child Relationship in html</title>
+        <style>
+            #p{
+                height: 500px;
+                width: 500px;
+                background-color: red;
+            }
+            #c{
+                height: 250px;
+                width: 250px;
+                background-color: #000;
+            }
+            #c2{
+                height: 250px;
+                width: 250px;
+                background-color: purple;
+            }
+            #p:hover{
+                background-color: orange;
+            }
+
+            /* NOTE: Agar hum chahte hai ki hum apna mouse jab parent pe leke ayye "p" to hamara children ka color change ho 'c'
+            to uske liye hume "DESENDENT SELECTOR" ka use karna hoga. */
+
+            /* Desendent Selector Syntax.
+
+            parent child{
+
+            } */
+
+            #p:hover #c{
+                background-color: blue;
+
+                /* Agar hum chahte hai ki background-color change hone k sath sath wo circle bhi ho jana chahiyen to uske liye hum border: radius ka use karte hai */
+                
+                border-radius: 250px;
+            }
+
+            #p:hover #c2{
+                background-color: brown;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="p">
+            <div id="c"></div>
+            <div id="c2"></div>
+        </div>
+    </body>
+</html>
